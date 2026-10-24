@@ -69,6 +69,17 @@ A leaked or stolen gateway API key could allow another person to make requests a
 
 Test valid-key authentication, invalid-key rejection, and revocation. Confirm that a request using a revoked key is rejected.
 
+### Why Client Tokens Are Not Passed Through to Upstream Servers
+
+The gateway API key authenticates a team member to the gateway. It represents the user's identity and permission to access gateway functionality; it is not an upstream service credential.
+
+The gateway should validate the client key, authorize the requested operation, and use the appropriate server-side upstream credentials when communicating with an upstream MCP server.
+
+Passing the client token directly to an upstream server could unnecessarily expose the token and couple gateway authentication to upstream authentication. Keeping these credentials separate establishes a clearer trust boundary and allows the gateway to control access centrally.
+
+**Verification:** Inspect the gateway's upstream request implementation and test requests to confirm that client API keys are not forwarded upstream and that upstream credentials remain server-side.
+
+
 ## 6. Untrusted Upstream MCP Servers
 
 ### Threat
