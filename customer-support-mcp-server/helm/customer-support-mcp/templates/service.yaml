@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: customer-support-mcp
+  labels:
+    app: customer-support-mcp
+spec:
+  type: {{ .Values.service.type }}
+  selector:
+    app: customer-support-mcp
+  ports:
+    - name: http
+      port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
+      protocol: TCP

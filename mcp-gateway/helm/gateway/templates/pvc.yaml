@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: urumi-gateway-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: {{ .Values.database.storageClassName }}
+  resources:
+    requests:
+      storage: {{ .Values.database.storageSize }}

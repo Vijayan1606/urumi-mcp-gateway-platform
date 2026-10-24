@@ -1,0 +1,49 @@
+# Python environments and generated files
+**/venv/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+*.py[cod]
+
+# Node dependencies and build output
+**/node_modules/
+**/dist/
+
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+**/keys/
+keys/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local databases and logs
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.cursor/
+
+# Backups and container image archives
+*.backup
+*.bak
+*.tar
+
+# Temporary files
+*.tmp
+*.swp
+
+# Nested Git metadata
+**/.git/

@@ -1,0 +1,47 @@
+global:
+  environment: local
+
+gateway:
+  replicaCount: 1
+  image:
+    repository: urumi-mcp-gateway
+    tag: "1.0.22"
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 8003
+
+wooMcp:
+  replicaCount: 1
+  image:
+    repository: urumi-woo-mcp
+    tag: "1.0.0"
+    pullPolicy: IfNotPresent
+
+inventoryMcp:
+  replicaCount: 1
+  image:
+    repository: urumi-inventory-mcp
+    tag: "1.0.5"
+    pullPolicy: IfNotPresent
+
+customerSupportMcp:
+  replicaCount: 1
+  image:
+    repository: urumi-customer-support-mcp
+    tag: "1.0.0"
+    pullPolicy: IfNotPresent
+
+wordpress:
+  image:
+    repository: wordpress
+    tag: "6.8-apache"
+
+mysql:
+  image:
+    repository: mysql
+    tag: "8.4"
+
+ingress:
+  enabled: true
+  className: traefik

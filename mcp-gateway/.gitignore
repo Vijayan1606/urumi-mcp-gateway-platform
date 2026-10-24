@@ -1,0 +1,41 @@
+# Secrets
+.admin_key
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local database
+urumi_gateway.db
+urumi_gateway.db-shm
+urumi_gateway.db-wal
+
+# Test and editor artifacts
+.pytest_cache/
+.vscode/
+
+# Local administrator recovery utilities
+recover_admin_key.py
+reset_admin_key.py
+rotate_admin_key.py
+
+# Local backups and Docker image archives
+*.tar
+*.backup
+
+# Local development settings
+.cursor/
+
+# Python virtual environments and generated files
+venv/
+.venv/
+**/venv/
+**/.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
