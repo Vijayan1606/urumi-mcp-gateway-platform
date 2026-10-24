@@ -171,3 +171,10 @@ This endpoint depends on the server remaining available and the relevant network
 - The production deployment should be validated before running an upgrade.
 - Database credentials must be rotated and removed from plaintext manifests before the repository is published.
 
+## Bonus and Standout Features
+
+The project includes a centralized MCP gateway, three upstream MCP servers, a WooCommerce integration, an external MCP client, API-key management, audit logging, and Kubernetes deployment configuration.
+
+These are core project components, not necessarily optional bonus features.
+
+Optional bonus features should be listed here only after implementation and verification. For each completed bonus, describe the feature and identify its source files or configuration paths.
