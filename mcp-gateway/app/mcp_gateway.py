@@ -41,8 +41,7 @@ mcp_server = FastMCP(
     transport_security=TransportSecuritySettings(
         enable_dns_rebinding_protection=True,
         allowed_hosts=[
-            "reuters-chicken-attractive-unable.trycloudflare.com",
-            "danny-evans-teens-deputy.trycloudflare.com",
+            "all-quantity-favor-ltd.trycloudflare.com",
         ],
     ),
 )
